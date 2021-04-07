@@ -1,6 +1,6 @@
 <section class="edit-user" *ngIf="user">
   <header>Edit</header>
-    <form [formGroup]="editUser">
+    <form [formGroup]="editUser" (submit)="saveUserData()">
       <div class="row">
         <div class="col-4">
           <strong>Title</strong>

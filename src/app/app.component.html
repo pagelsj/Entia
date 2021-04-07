@@ -6,13 +6,13 @@
     <div class="row justify-content-center">
       <section class="tile bg_1 col-11 col-md-7">
         <header>User</header>
-        <select [(ngModel)]="selected" (change)="selectedUser()">
+        <select [(ngModel)]="selected">
           <option *ngFor="let user of userList" [ngValue]="user">{{user.firstName}}</option>
         </select>
         </section>
 
       <section *ngIf="selected" class="tile bg_1 col-11 col-md-7">
-        <app-edit-user [user]="selected"></app-edit-user>
+        <app-edit-user [user]="selected" (updatedUser)="updateUser($event)"></app-edit-user>
       </section>
     </div>
 

@@ -4,8 +4,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { GetDataService } from './services';
 import { EditUserComponent } from './components';
+import {
+  GetDataService,
+  UpdateDataService
+} from './services';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { EditUserComponent } from './components';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ GetDataService ],
+  providers: [
+    GetDataService,
+    UpdateDataService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -16,14 +16,19 @@ export class AppComponent implements OnInit {
     private getData: GetDataService
   ) {}
 
+  updateUser(userData) {
+    // Find the index of the object with the matching ID.
+    let index = this.userList.findIndex(el => el.id === userData.id);
+
+    this.userList[index] = userData;
+    this.selected = null;
+  }
+
   ngOnInit() {
     this.getData.load()
       .subscribe(resp => {
         this.userList = resp;
       })
   }
-  selectedUser() {
-    // this.user = event.value
-    console.log(this.selected)
-  }
+
 }

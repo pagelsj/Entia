@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 
@@ -16,6 +16,6 @@ export class GetDataService {
   ) { }
 
   load():Observable<User[]>{
-    return this.http.get<User[]>(environment.BASE_API+`/users`);
+    return this.http.get<User[]>(`${environment.BASE_API}/users`);
   }
 }
