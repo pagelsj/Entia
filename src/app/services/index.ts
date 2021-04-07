@@ -1,0 +1,1 @@
+export { GetDataService } from './get-data/get-data.service';

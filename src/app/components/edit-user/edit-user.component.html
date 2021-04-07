@@ -1,0 +1,47 @@
+<section class="edit-user" *ngIf="user">
+  <header>Edit</header>
+    <form [formGroup]="editUser">
+      <div class="row">
+        <div class="col-4">
+          <strong>Title</strong>
+        </div>
+        <div class="col">
+          {{ user.title }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <label for="firstName">First name</label>
+        </div>
+        <div class="col">
+          <input type="text" formControlName="firstName">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <strong>Last name</strong>
+        </div>
+        <div class="col">
+          {{ user.lastName }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <strong>Post code</strong>
+        </div>
+        <div class="col">
+          {{ user.postCode }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </div>
+
+    </form>
+</section>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from './services/get-data/get-data.service';
+import { GetDataService } from './services/';
 
 import { User } from './interfaces/user.interface';
 
@@ -9,7 +9,8 @@ import { User } from './interfaces/user.interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  users:Array<User>;
+  userList:Array<User>;
+  selected: User;
 
   constructor(
     private getData: GetDataService
@@ -18,8 +19,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getData.load()
       .subscribe(resp => {
-        this.users = resp;
-        console.log('this.users', this.users)
+        this.userList = resp;
       })
+  }
+  selectedUser() {
+    // this.user = event.value
+    console.log(this.selected)
   }
 }
