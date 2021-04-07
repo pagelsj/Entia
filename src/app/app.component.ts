@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './services/get-data/get-data.service';
 
+import { User } from './interfaces/user.interface';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'entia';
+  users:Array<User>;
+
   constructor(
     private getData: GetDataService
   ) {}
@@ -15,7 +18,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getData.load()
       .subscribe(resp => {
-        console.log(resp)
+        this.users = resp;
+        console.log('this.users', this.users)
       })
   }
 }
