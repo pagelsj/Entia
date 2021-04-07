@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styling/variables';
+@import './styling/inputs';
+@import './styling/buttons';
+@import './styling/misc';
+@import './styling/tile';
+
+html,
+body {
+  position:relative;
+  height: 100%;
+}
+body{
+  margin-top: 0;
+  font-size: 1em;
+  font-weight: 100;
+}
