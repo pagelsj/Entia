@@ -1,47 +1,56 @@
 <section class="edit-user" *ngIf="user">
+  <header>User values</header>
+  <div class="row">
+    <div class="col-4">
+      <strong>Title</strong>
+    </div>
+    <div class="col">
+      {{ user.title }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <strong>First name</strong>
+    </div>
+    <div class="col">
+      {{ user.firstName }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <strong>Last name</strong>
+    </div>
+    <div class="col">
+      {{ user.lastName }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <strong>Post code</strong>
+    </div>
+    <div class="col">
+      {{ user.postCode }}
+    </div>
+  </div>
+
   <header>Edit</header>
-    <form [formGroup]="editUser" (submit)="saveUserData()">
-      <div class="row">
-        <div class="col-4">
-          <strong>Title</strong>
-        </div>
-        <div class="col">
-          {{ user.title }}
-        </div>
+  <form [formGroup]="editUser" (submit)="saveUserData()">
+    <div class="row">
+      <div class="col-4">
+        <label for="firstName">First name</label>
       </div>
-
-      <div class="row">
-        <div class="col-4">
-          <label for="firstName">First name</label>
-        </div>
-        <div class="col">
-          <input type="text" formControlName="firstName">
-        </div>
+      <div class="col">
+        <input type="text" formControlName="firstName">
       </div>
-
-      <div class="row">
-        <div class="col-4">
-          <strong>Last name</strong>
-        </div>
-        <div class="col">
-          {{ user.lastName }}
-        </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn">Save</button>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-4">
-          <strong>Post code</strong>
-        </div>
-        <div class="col">
-          {{ user.postCode }}
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <button type="submit" class="btn">Save</button>
-        </div>
-      </div>
-
-    </form>
+  </form>
 </section>

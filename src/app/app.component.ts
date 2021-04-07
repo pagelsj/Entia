@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     let index = this.userList.findIndex(el => el.id === userData.id);
 
     this.userList[index] = userData;
-    this.selected = null;
+    // this.selected = null;
   }
 
   ngOnInit() {

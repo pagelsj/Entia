@@ -40,6 +40,7 @@ export class EditUserComponent implements OnChanges {
     this.updateService.update(this.user.id, this.editUser.value)
       .subscribe(resp => {
         console.log('UPDATE:resp', resp);
+        this.user = resp;
         this.updatedUser.emit(resp);
       });
   }

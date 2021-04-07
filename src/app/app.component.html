@@ -9,7 +9,7 @@
         <select [(ngModel)]="selected">
           <option *ngFor="let user of userList" [ngValue]="user">{{user.firstName}}</option>
         </select>
-        </section>
+      </section>
 
       <section *ngIf="selected" class="tile bg_1 col-11 col-md-7">
         <app-edit-user [user]="selected" (updatedUser)="updateUser($event)"></app-edit-user>
