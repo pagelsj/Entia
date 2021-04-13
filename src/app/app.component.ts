@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './services/';
+import { FieldUpdateComponent } from './components/';
 
 import { User } from './interfaces/user.interface';
 

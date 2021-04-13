@@ -1,0 +1,20 @@
+<section class="field-update" *ngIf="user">
+  <header>Edit</header>
+  <form [formGroup]="editUser" (submit)="saveUserData()">
+
+    <div class="row">
+      <div class="col-4">
+        <label for="fieldName">{{ labelToken }}</label>
+      </div>
+      <div class="col">
+        <input type="text" formControlName="fieldName">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn">Save</button>
+      </div>
+    </div>
+    </form>
+</section>

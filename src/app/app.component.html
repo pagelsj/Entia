@@ -13,6 +13,8 @@
 
       <section *ngIf="selected" class="tile bg_1 col-11 col-md-7">
         <app-edit-user [user]="selected" (updatedUser)="updateUser($event)"></app-edit-user>
+
+        <app-field-update [user]="selected" [labelToken]="'firstName'"></app-field-update>
       </section>
     </div>
 

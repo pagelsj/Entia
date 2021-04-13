@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { EditUserComponent } from './components';
+import { EditUserComponent, FieldUpdateComponent } from './components';
 import {
   GetDataService,
   UpdateDataService
@@ -13,7 +13,8 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    EditUserComponent
+    EditUserComponent,
+    FieldUpdateComponent
   ],
   imports: [
     BrowserModule,
